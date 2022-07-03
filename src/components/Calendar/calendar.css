@@ -1,0 +1,68 @@
+.calendar {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(7, 100px);
+}
+
+.calendar .day,
+.calendar .date {
+  display: flex;
+}
+
+.day {
+  background: #1d6c85;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.date {
+  padding: 2px;
+  background: white;
+  height: 50px;
+  box-sizing: border-box;
+  border: 1px darkgray solid;
+  font-size: 10px;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.date .reminders {
+  align-self: flex-end;
+  visibility: hidden;
+}
+
+.date .plus-icon {
+  align-self: center;
+  visibility: hidden;
+}
+
+.date:hover .plus-icon {
+  visibility: visible;
+}
+
+.date:hover {
+  border: 1px solid black;
+  box-shadow: 1px 1px 4px 1px lightgray;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.pin {
+  transform: rotate(-45deg);
+}
+
+.disabled {
+  background: lightgray;
+}
+
+.visible {
+  visibility: visible !important;
+}
+
+.text-light {
+  color: rgb(217, 228, 250);
+}
